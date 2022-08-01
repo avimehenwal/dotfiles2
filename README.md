@@ -8,6 +8,10 @@ NMMM - new minial managable modular dotfiles
 - [ ] LSP Language Server Protocol client-server
 - [ ] Treesitter AST
 
+## LSP
+
+- specification put forward by Microsoft to support multiple editors
+
 ### Lua Plugins
 
 - write lua plugins from scratch
@@ -21,4 +25,11 @@ NMMM - new minial managable modular dotfiles
 :lua require"my-plugin.utils"
 :lua package.loaded["my-plugin"] = nil
 :lua P(package.loaded)
+```
+
+Search substring of a search keyword
+Search files in other directories then open in vertical split using CTRL-V
+```
+:Telescope grep_string search=<string>
+:Telescope find_files cwd=~/.config
 ```
