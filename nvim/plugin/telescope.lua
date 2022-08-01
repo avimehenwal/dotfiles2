@@ -1,3 +1,5 @@
+local fb_actions = require "telescope".extensions.file_browser.actions
+
 require('telescope').setup{
     defaults = {
         prompt_prefix = "$ ",
@@ -16,10 +18,15 @@ require('telescope').setup{
 	      hijack_netrw = true,
 	      mappings = {
 		["i"] = {
-		  -- your custom insert mode mappings
+		  -- in normal mode interferes with ENter and movement keys and hinders normal operation
+		  ["<C-n>"] = fb_actions.create,
+		  ["<C-r>"] = fb_actions.rename,
+		  ["<C-m>"] = fb_actions.move,
+		  ["<C-y>"] = fb_actions.copy,
+		  ["<C-d>"] = fb_actions.remove,
 		},
 		["n"] = {
-		  -- your custom normal mode mappings
+			-- your custom normal mode mappings
 		},
 	      },
 	    },

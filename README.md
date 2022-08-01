@@ -25,6 +25,7 @@ NMMM - new minial managable modular dotfiles
 :lua require"my-plugin.utils"
 :lua package.loaded["my-plugin"] = nil
 :lua P(package.loaded)
+:lua vim.lsp.buf.code_actions()
 ```
 
 Search substring of a search keyword
