@@ -31,13 +31,16 @@ vim.cmd [[packadd packer.nvim]]
 
 require("lsp")
 require("avi.keymaps")
+require("avi.treesitter")
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- Post-install/update hook with neovim command
+  -- treesitter , parsing runtime library for text
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'nvim-treesitter/nvim-treesitter-textobjects'
+  use 'nvim-treesitter/playground'
 
   use {
     'nvim-telescope/telescope.nvim',
@@ -50,4 +53,5 @@ return require('packer').startup(function(use)
 
   -- lsp
   use 'neovim/nvim-lspconfig'
+
 end)
