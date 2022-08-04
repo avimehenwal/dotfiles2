@@ -11,4 +11,6 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, {buffer=0})
 -- actual understanding of code from LSP :wa to save changes in other files 
 vim.keymap.set("n", "rr", vim.lsp.buf.rename, {buffer=0})
 
+vim.keymap.set("n", "<leader>fb", "<cmd>Telescope file_browser<cr>", {remap=false})
+
 print("avi:keymaps loaded")
