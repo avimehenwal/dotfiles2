@@ -4,4 +4,6 @@ require("mason-lspconfig").setup({
 })
 
 print('mason lsp loaded')
+
 require('lsp.typescript')
+require('lsp.go')

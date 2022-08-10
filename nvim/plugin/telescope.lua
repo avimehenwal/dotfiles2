@@ -6,7 +6,7 @@ require('telescope').setup{
 	mappings = {
 		i = {
 			-- switch projects / directories / worspaces as new entries in this table
-			["<C-a>"] = function() print("hello") end
+			["<c-a>"] = function() print("hello") end
 		}
 	}
     },
@@ -35,3 +35,7 @@ require('telescope').setup{
 
 require("telescope").load_extension "file_browser"
 print("Telescope lua config")
+
+-- command mode abbreviations
+vim.cmd('cabbrev ls Telescope buffers<cr>')
+vim.cmd('cabbrev E Telescope file_browser<cr>')

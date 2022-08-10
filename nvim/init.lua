@@ -37,12 +37,34 @@ Plug 'mfussenegger/nvim-lint'
 Plug 'mhartington/formatter.nvim'
 
 Plug 'gruvbox-community/gruvbox'
-Plug "terrortylor/nvim-comment"
+Plug 'terrortylor/nvim-comment'
+Plug 'tpope/vim-fugitive'
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'glepnir/galaxyline.nvim'
+
 vim.call('plug#end')
 
 require("avi.keymaps")
 -- require("avi.treesitter")
 require('lsp.mason')
 require('nvim_comment').setup()
+require("nvim-tree").setup({
+  sort_by = "case_sensitive",
+  view = {
+    adaptive_size = true,
+    mappings = {
+      list = {
+        { key = "u", action = "dir_up" },
+      },
+    },
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
+require('avi.galaxyline')
 
 vim.cmd 'colorscheme gruvbox'
