@@ -66,6 +66,7 @@ require("nvim-tree").setup({
   },
 })
 require('avi.statusline')
+require('avi.git-vcs')
 
 vim.cmd 'colorscheme gruvbox'
 
