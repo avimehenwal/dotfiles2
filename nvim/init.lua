@@ -40,7 +40,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'terrortylor/nvim-comment'
 Plug 'tpope/vim-fugitive'
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'glepnir/galaxyline.nvim'
+Plug 'nvim-lualine/lualine.nvim'
 
 vim.call('plug#end')
 
@@ -65,6 +65,9 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
-require('avi.galaxyline')
+require('avi.statusline')
 
 vim.cmd 'colorscheme gruvbox'
+
+-- TODO open terminal in insert mode, so that it could be quickly exited with <cr>
+-- autocmd TermOpen * startinsert

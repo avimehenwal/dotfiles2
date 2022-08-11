@@ -34,3 +34,7 @@ Search files in other directories then open in vertical split using CTRL-V
 :Telescope grep_string search=<string>
 :Telescope find_files cwd=~/.config
 ```
+
+```
+:belowright vsplit | terminal rg --count -l vim
+```

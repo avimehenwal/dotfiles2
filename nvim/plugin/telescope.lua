@@ -36,6 +36,6 @@ require('telescope').setup{
 require("telescope").load_extension "file_browser"
 print("Telescope lua config")
 
--- command mode abbreviations
-vim.cmd('cabbrev ls Telescope buffers<cr>')
+-- -- command mode abbreviations
+-- vim.cmd('cabbrev ls Telescope buffers<cr>')
 vim.cmd('cabbrev E Telescope file_browser<cr>')
