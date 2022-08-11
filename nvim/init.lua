@@ -1,5 +1,9 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
+local set = vim.opt
+
+set.guifont = { "FiraCode Nerd Font", ":h13"}
+
 vim.opt.backup = false
 -- vim.opt.colorcolumn = "120"
 vim.opt.completeopt = "menu,menuone,noselect"
