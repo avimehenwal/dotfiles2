@@ -49,7 +49,9 @@ Plug 'nvim-lualine/lualine.nvim'
 vim.call('plug#end')
 
 require("avi.keymaps")
--- require("avi.treesitter")
+
+require("avi.treesitter")
+
 require('lsp.mason')
 require('nvim_comment').setup()
 require("nvim-tree").setup({

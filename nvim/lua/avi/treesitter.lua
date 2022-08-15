@@ -143,4 +143,4 @@ require'nvim-treesitter.configs'.setup {
     },
   }
   
-print('treesitter loaded')k
+print('treesitter loaded')
