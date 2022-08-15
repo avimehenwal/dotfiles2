@@ -38,3 +38,7 @@ Search files in other directories then open in vertical split using CTRL-V
 ```
 :belowright vsplit | terminal rg --count -l vim
 ```
+
+## Text Editing
+
+vertical alignment | https://vim.fandom.com/wiki/Simple_text_alignment
