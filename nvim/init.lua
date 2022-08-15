@@ -1,24 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
-local set = vim.opt
-
-set.guifont = { "FiraCode Nerd Font", ":h13"}
-
-vim.opt.backup = false
--- vim.opt.colorcolumn = "120"
-vim.opt.completeopt = "menu,menuone,noselect"
-vim.opt.hidden = true
-vim.opt.termguicolors = true
-
-vim.o.autoindent = true
-vim.o.cursorline = true
-vim.o.expandtab = true
-vim.o.number = true
-vim.o.relativenumber = true
-vim.o.shiftwidth = 2
-vim.o.tabstop = 2
-vim.o.wrap = false
-
 -- vim-Plug>> packer - to make it work on wsl and windows
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
@@ -48,10 +27,9 @@ Plug 'nvim-lualine/lualine.nvim'
 
 vim.call('plug#end')
 
+require("avi.set-options")
 require("avi.keymaps")
-
 require("avi.treesitter")
-
 require('lsp.mason')
 require('nvim_comment').setup()
 require("nvim-tree").setup({
