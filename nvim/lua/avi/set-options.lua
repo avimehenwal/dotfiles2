@@ -4,7 +4,7 @@ local set = vim.opt
 set.guifont = { "FiraCode Nerd Font", ":h13"}
 set.backup = false
 set.completeopt = "menu,menuone,noselect"
-set.hidden = true
+set.hidden = false                               -- https://github.com/neovim/neovim/issues/17841                    
 set.termguicolors = true
 
 -- use external grep program to use with vim
