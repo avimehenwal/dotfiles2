@@ -1,14 +1,14 @@
-require'lspconfig'.sumneko_lua.setup {
 
+require'lspconfig'.sumneko_lua.setup {
     on_attach = function()
-      print("lua lsp attached to buffer")
+      require('notify')('lsp server attached to buffer', vim.log.levels.INFO, {title='LSP LUA'})
+
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
       -- jumplist movements CTRL-T | taglist CTRL-O/I
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer=0})
       vim.keymap.set("n", "gtd", vim.lsp.buf.type_definition, {buffer=0})
       vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer=0})
     end,
-    
     settings = {
       Lua = {
         runtime = {
@@ -26,12 +26,9 @@ require'lspconfig'.sumneko_lua.setup {
           library = vim.api.nvim_get_runtime_file("", true),
         },
         -- Do not send telemetry data containing a randomized but unique identifier
-	
         telemetry = {
           enable = false,
         },
       },
     },
   }
-
-print('lua lsp loaded')

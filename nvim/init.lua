@@ -32,6 +32,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-lualine/lualine.nvim'
 
+-- raising bar
+Plug 'rcarriga/nvim-notify'
+
 vim.call('plug#end')
 
 require("avi.set-options")
@@ -66,3 +69,4 @@ vim.cmd 'colorscheme gruvbox'
 
 -- TODO open terminal in insert mode, so that it could be quickly exited with <cr>
 -- autocmd TermOpen * startinsert
+require('notify')("My super important message", vim.log.levels.INFO, {title='init.lua'})
