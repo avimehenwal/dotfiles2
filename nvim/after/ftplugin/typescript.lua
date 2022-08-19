@@ -10,8 +10,8 @@ vim.opt_local.softtabstop = 2
 vim.opt_local.tabstop     = 2
 vim.opt_local.textwidth   = 100
 
-vim.opt_local.equalprg  = [[prettier --stdin-filepath '%:p']]
-vim.opt_local.formatprg = "" -- http://www.nicemice.net/par/
+vim.opt_local.equalprg  = [[ prettier --stdin-filepath '%:p' ]]
+vim.opt_local.formatprg = [[ prettier --stdin-filepath '%:p' ]] -- http://www.nicemice.net/par/
 vim.opt_local.makeprg   = [[tsc %]]
 
 vim.cmd [[setlocal spell]]
