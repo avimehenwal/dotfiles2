@@ -17,9 +17,10 @@ vim.keymap.set("n", "[B", "<cmd>bfirst<cr>", opts)
 
 -- code actions / Refactor
 -- actual understanding of code from LSP :wa to save changes in other files 
-vim.keymap.set("n", "rr", vim.lsp.buf.rename, {buffer=0})
+vim.keymap.set("n", "lrn", vim.lsp.buf.rename, {buffer=0})
+vim.keymap.set("n", "lr", vim.lsp.buf.references, {buffer=0})
+vim.keymap.set("n", "lca", vim.lsp.buf.code_action, {buffer=0})
 
 vim.keymap.set("n", "<c-p>", "<cmd>Telescope find_files<cr>", {remap=false})
 vim.keymap.set("n", "<leader>b", "<cmd>NvimTreeToggle<cr>", {remap=false})
 
-print("avi:keymaps loaded")

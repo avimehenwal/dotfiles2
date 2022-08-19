@@ -1,8 +1,3 @@
--- Disable some built-in plugins we don't want
-local disabled_built_ins = {
-  "netrwPlugin",
-}
-
 -- vim-Plug>> packer - to make it work on wsl and windows
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
