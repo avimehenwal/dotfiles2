@@ -35,7 +35,7 @@ vim.call('plug#end')
 require("avi.set-options")
 require("avi.keymaps")
 require("avi.treesitter")
-require('lsp.mason')
+require('lsp')
 require('nvim_comment').setup()
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
@@ -64,4 +64,3 @@ vim.cmd 'colorscheme gruvbox'
 
 -- TODO open terminal in insert mode, so that it could be quickly exited with <cr>
 -- autocmd TermOpen * startinsert
-require('notify')("My super important message", vim.log.levels.INFO, {title='init.lua'})
