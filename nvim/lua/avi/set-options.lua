@@ -25,3 +25,6 @@ set.ignorecase = true                            -- case insensitive search...
 set.smartcase  = true                            -- unless I use caps
 set.hlsearch   = true                            -- highlight matching text
 set.incsearch  = true                            -- update results while I type
+
+set.splitbelow = true
+set.splitright = true
