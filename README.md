@@ -42,3 +42,12 @@ Search files in other directories then open in vertical split using CTRL-V
 ## Text Editing
 
 vertical alignment | https://vim.fandom.com/wiki/Simple_text_alignment
+
+## Completions
+
+- control project related and file related completions
+- other plugins can use the sample completion api to provide completions using List-of-sources
+
+## GIT
+
+- [ ] support multiple git accounts based on directory https://www.freecodecamp.org/news/how-to-handle-multiple-git-configurations-in-one-machine/

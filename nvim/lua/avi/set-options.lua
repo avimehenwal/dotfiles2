@@ -2,6 +2,7 @@ local set = vim.opt
 
 -- set.colorcolumn = "120"
 set.guifont = { "FiraCode Nerd Font", ":h15"}
+set.background = "dark"
 set.backup = false
 set.completeopt = "menu,menuone,noselect"
 set.hidden = false                               -- https://github.com/neovim/neovim/issues/17841                    

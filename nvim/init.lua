@@ -30,6 +30,12 @@ Plug 'nvim-lualine/lualine.nvim'
 -- raising bar
 Plug 'rcarriga/nvim-notify'
 
+-- completion
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
 vim.call('plug#end')
 
 require("avi.set-options")
@@ -56,6 +62,7 @@ require("nvim-tree").setup({
 })
 require('avi.statusline')
 require('avi.git-vcs')
+require('avi.completion')
 
 -- Project Specific
 require('avi.project.dotfiles')
@@ -64,3 +71,4 @@ vim.cmd 'colorscheme gruvbox'
 
 -- TODO open terminal in insert mode, so that it could be quickly exited with <cr>
 -- autocmd TermOpen * startinsert
+
