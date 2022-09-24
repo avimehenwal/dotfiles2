@@ -26,3 +26,7 @@ vim.keymap.set("n", "lca", vim.lsp.buf.code_action, {buffer=0})
 vim.keymap.set("n", "<c-p>", "<cmd>Telescope find_files<cr>", {remap=false})
 vim.keymap.set("n", "<leader>b", "<cmd>NvimTreeToggle<cr>", {remap=false})
 
+-- execute current line under cursor as shell command
+vim.keymap.set("n", "<leader><leader>", "<cmd>execute '!'.getline('.')<cr>", {remap=false})
+-- delete all opened buffers except the current one
+vim.keymap.set("n", "<leader>bd", "<cmd>%bdelete | edit# | bdelete#<cr>", {remap=false})
