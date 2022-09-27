@@ -151,4 +151,3 @@ require'nvim-treesitter.configs'.setup {
    },
 }
 
-print('treesitter loaded')

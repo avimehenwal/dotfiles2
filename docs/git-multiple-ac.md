@@ -9,10 +9,12 @@
 [includeIf "gitdir:~/WORK/<ORGANIZATION>/"]
   path = ~/.gitconfig-ORGANIZATION
 
-...
-
 [alias]
 	s = status
+	co = checkout
+	ca = commit --amend
+[log]
+	date = relative
 ```
 
 Sample account specific gitconfig file
@@ -20,7 +22,7 @@ Sample account specific gitconfig file
 ```
 [user]
     name = avimehenwal
-    email = avi.mehanwal@gmail.com
+    email = SOME_EMAIL_ID
 	  signingkey = GPG_SIGN_KEY
 [core]
     editor = nvim

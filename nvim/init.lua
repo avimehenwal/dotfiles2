@@ -23,6 +23,7 @@ Plug 'mhartington/formatter.nvim'
 
 Plug 'gruvbox-community/gruvbox'
 Plug 'terrortylor/nvim-comment'
+-- VCS alternatives https://github.com/TimUntersberger/neogit
 Plug 'tpope/vim-fugitive'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-lualine/lualine.nvim'
@@ -57,7 +58,7 @@ require("nvim-tree").setup({
     group_empty = true,
   },
   filters = {
-    dotfiles = true,
+    dotfiles = false,
   },
 })
 require('avi.statusline')

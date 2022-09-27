@@ -23,11 +23,10 @@ vim.keymap.set("n", "gtd", vim.lsp.buf.type_definition, bufopts)
   vim.keymap.set('n', '<space>wl', function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, bufopts)
-  vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
-  vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
+  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
+  vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
+  vim.keymap.set('n', '<leader>f',function() vim.lsp.buf.format { async = true } end, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<space>f',function() vim.lsp.buf.format { async = true } end, bufopts)
-      require('notify')('lsp server attached to buffer', vim.log.levels.INFO, {title='LSP LUA'})
 end
 
 local lsp_flags = {
@@ -92,5 +91,3 @@ require('lspconfig')['sumneko_lua'].setup {
     },
   }
 
-
-require('notify')('lsp configs loaded')
