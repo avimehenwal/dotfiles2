@@ -12,6 +12,6 @@ vim.opt_local.textwidth   = 100
 
 vim.opt_local.equalprg  = [[ prettier --stdin-filepath '%:p' ]]
 vim.opt_local.formatprg = [[ prettier --stdin-filepath '%:p' ]] -- http://www.nicemice.net/par/
-vim.opt_local.makeprg   = [[tsc %]]
+vim.opt_local.makeprg   = [[ ts-node % ]]
 
 vim.cmd [[setlocal spell]]
