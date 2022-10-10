@@ -16,6 +16,8 @@ vim.keymap.set("n", "]b", "<cmd>bnext<cr>", opts)
 vim.keymap.set("n", "[b", "<cmd>bprevious<cr>", opts)
 vim.keymap.set("n", "]B", "<cmd>blast<cr>", opts)
 vim.keymap.set("n", "[B", "<cmd>bfirst<cr>", opts)
+vim.keymap.set("n", "[t", "<cmd>tabprevious<cr>", opts)
+vim.keymap.set("n", "]t", "<cmd>tabnext<cr>", opts)
 
 -- code actions / Refactor
 -- actual understanding of code from LSP :wa to save changes in other files 
