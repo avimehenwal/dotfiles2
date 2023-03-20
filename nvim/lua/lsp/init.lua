@@ -1,7 +1,7 @@
 util = require "lspconfig/util"
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { "sumneko_lua", "tsserver" } })
+    ensure_installed = { "lua_ls", "tsserver" } })
 
 
 local lsp_on_attach_cb = function(client, bufnr)
@@ -65,7 +65,7 @@ require('lspconfig')['gopls'].setup{
     on_attach = lsp_on_attach_cb,
 }
 
-require('lspconfig')['sumneko_lua'].setup {
+require('lspconfig')['lua_ls'].setup {
     on_attach = lsp_on_attach_cb,
     settings = {
       Lua = {
